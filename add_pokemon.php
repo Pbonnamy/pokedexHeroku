@@ -25,11 +25,29 @@
       <input class="input_add" type="number" name="attaque" required="required" placeholder="Attaque"><br><br>
       <input class="input_add" type="number" name="defense" required="required" placeholder="Defense"><br><br>
       <input class="input_add" type="number" name="vitesse" required="required" placeholder="Vitesse"><br><br>
-      <strong class="image_strong">Image : </strong><input class="input_file" type="file" name="image"><br>
-      <input class="formulaire_ajout_submit" type="submit" name="submit" value="Ajouter">
+      <strong class="image_strong">Image</strong><br><br>
+      <input type="hidden" name="avatar_url" id="avatar_url" class="simple-file-upload">
+      <br>
+      <input class="formulaire_ajout_submit" type="submit" name="submit" value="Ajouter" onclick="sendimgLink()">
     </form>
     </main>
 
+    <script>
+
+    function sendimgLink(){
+      const imglink = document.getElementById('avatar_url').value;
+      let request = new XMLHttpRequest();
+      request.open('GET', 'verif_pokemon.php?imglinkpath='+imglink);
+      request.onreadystatechange = function() {
+        if(request.readyState == 4) {
+          console.log('done');
+        }
+      }
+      request.send();
+    }
+
+  </script>
+    <script src="https://app.simplefileupload.com/buckets/bed9ccaf1cfa347d4933363c22c8a076.js"></script>
     <?php include("includes/footer.php");?>
   </body>
 </html>

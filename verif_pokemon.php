@@ -21,6 +21,8 @@ require('includes/config.php');
     header('location: add_pokemon.php?msg=Tous les champs ne sont pas remplis.');
   }
 
+$imglink = $_GET['imglinkpath'];
+/*
   //Upload de l'image
   $acceptable = ['image/jpeg', 'image/png', 'image/jpg'];
   if(!in_array($_FILES['image']['type'], $acceptable)){
@@ -43,7 +45,7 @@ require('includes/config.php');
 
   $chemin_image = $path . '/' . $filename;
   move_uploaded_file($_FILES['image']['tmp_name'], $chemin_image);
-
+*/
 
   //Déclaration
 
@@ -75,7 +77,7 @@ require('includes/config.php');
 
   //Envoie
 
-  $q = 'INSERT INTO pokemon (nom, pv, attaque, defense, vitesse, image, id_user) VALUES (:val1, :val2, :val3, :val4, :val5, :val6, :val7)';
+  $q = 'INSERT INTO pokemon (nom, pv, attaque, defense, vitesse,imglink, id_user) VALUES (:val1, :val2, :val3, :val4, :val5,:val6, :val7)';
   $req = $bdd -> prepare($q);
   $req -> execute([
     'val1' => $nom,
@@ -83,7 +85,7 @@ require('includes/config.php');
     'val3' => $attaque,
     'val4' => $defense,
     'val5' => $vitesse,
-    'val6' => $filename,
+    'val6' => $imglink,
     'val7' => $idUser
   ]);
 
