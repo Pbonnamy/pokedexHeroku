@@ -192,6 +192,10 @@ main{
   background-color: #4CAF50;
 }
 
+.formulaire_ajout_submit:hover{
+  cursor:pointer;
+}
+
 footer {
   position: absolute;
   bottom: 0;
