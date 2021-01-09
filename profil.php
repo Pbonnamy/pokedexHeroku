@@ -27,7 +27,7 @@
       <?php
       echo '<h3 class="profilData">Pseudo : &nbsp</h3><strong>'.$listUserData['pseudo'].'</strong><br>';
       echo '<h3 class="profilData">Email : &nbsp</h3><strong>'.$listUserData['email'].'</strong><br><br>';
-      echo '<h3 class="profilData">Image de profil : </h3> <img class="profilPic" src ="uploads/'.$listUserData['image'].'">';
+      echo '<h3 class="profilData">Image de profil : </h3> <img class="profilPic" src ="'.$listUserData['image'].'">';
       ?>
       <hr>
       <br>
@@ -46,7 +46,7 @@
             <p>Vitesse : '.$infoPoke['vitesse'].'</p>
           </div>
           <div class="right">
-            <img class="imgPoke" src="uploads/'.$infoPoke['image'] .'">
+            <img class="imgPoke" src="'.$infoPoke['image'] .'">
           </div>
         </div>';
 

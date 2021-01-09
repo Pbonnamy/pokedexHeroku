@@ -128,12 +128,16 @@ main{
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.btnhover:hover{
+  cursor:pointer;
+}
+
 .inputImage{
   padding: 16px;
   font-weight: 20px;
 }
 .labelImage{
-  margin-left: 5%;
   font-size: 20px;
   font-weight: bold;
 }
@@ -145,6 +149,10 @@ main{
 .submit{
   background-color: #4CAF50;
   color:#FFF;
+}
+
+.submit:hover{
+  cursor: pointer;
 }
 
 .aligntop{

@@ -36,15 +36,17 @@
                     <input type="email" name="email" class="inputConnexion" required="required" placeholder="email">
                     <input type="password" name="password" class="inputConnexion" required="required" placeholder="mot de passe">
                 </center>
-                    <label class="labelImage">Image:
-                    <input type="file" name="image" class="inputImage" required="required">
-                    </label>
-                      <center>
+                <center><div>
+                    <strong class="image_strong">Image de profil</strong><br><br>
+                      <input type="hidden" name="avatar_url" id="avatar_url" class="simple-file-upload">
+                      <br><br>
                     <input type="submit" name="inscription" class="inputConnexion submit" value="Inscription">
+                </div></center>
                   </form>
-                </center>
+
               </div>
           </main>
+          <script src="https://app.simplefileupload.com/buckets/bed9ccaf1cfa347d4933363c22c8a076.js"></script>
     <?php include "includes/footer.php" ?>
   </body>
 </html>

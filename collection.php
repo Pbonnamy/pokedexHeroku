@@ -36,7 +36,7 @@
             <p>Vitesse : '.$infoPoke['vitesse'].'</p>
           </div>
           <div class="right">
-            <img class="imgPoke" src="uploads/'.$infoPoke['image'] .'">
+            <img class="imgPoke" src="'.$infoPoke['image'] .'">
           </div>
         </div>';
 

@@ -20,7 +20,7 @@
     <strong><h1 class="formulaire_ajout">AJOUTER UN POKEMON</h1></strong>
     <br><br>
     <form class = "formulaire_ajout" method="POST" action="verif_pokemon.php" enctype="multipart/form-data">
-      <input class="input_add" type="text" name="nom" required="required" placeholder="Nom"><br><br>
+      <input id="pokename" class="input_add" type="text" name="nom" required="required" placeholder="Nom"><br><br>
       <input class="input_add" type="number" name="pv" required="required" placeholder="PV"><br><br>
       <input class="input_add" type="number" name="attaque" required="required" placeholder="Attaque"><br><br>
       <input class="input_add" type="number" name="defense" required="required" placeholder="Defense"><br><br>
@@ -28,25 +28,10 @@
       <strong class="image_strong">Image</strong><br><br>
       <input type="hidden" name="avatar_url" id="avatar_url" class="simple-file-upload">
       <br>
-      <input class="formulaire_ajout_submit" type="submit" name="submit" value="Ajouter" onclick="sendimgLink()">
+      <input class="formulaire_ajout_submit" type="submit" name="submit" value="Ajouter">
     </form>
     </main>
 
-    <script>
-
-    function sendimgLink(){
-      const imglink = document.getElementById('avatar_url').value;
-      let request = new XMLHttpRequest();
-      request.open('GET', 'verif_pokemon.php?imglinkpath='+imglink);
-      request.onreadystatechange = function() {
-        if(request.readyState == 4) {
-          console.log('done');
-        }
-      }
-      request.send();
-    }
-
-  </script>
     <script src="https://app.simplefileupload.com/buckets/bed9ccaf1cfa347d4933363c22c8a076.js"></script>
     <?php include("includes/footer.php");?>
   </body>
