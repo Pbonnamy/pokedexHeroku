@@ -11,7 +11,12 @@
     <main>
       <img src="assets/pikachu.png" alt="pikachu" class="mainImg">
       <h1 class="mainTitle">bienvenue sur le pokedex de l'esgi !</h1>
+
+      <?php require('includes/chatbox.php'); ?>
+
     </main>
+
+
     <?php include 'includes/footer.php' ?>
   </body>
 </html>

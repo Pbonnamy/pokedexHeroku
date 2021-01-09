@@ -1,3 +1,4 @@
+
 <footer class="copyrights headFoot">
 Copyright
   <?php echo date("Y"); echo " ";?>
