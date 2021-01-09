@@ -55,6 +55,7 @@ $req->execute([
  ]);
 
 $_SESSION['pseudo'] = $pseudo;
+$_SESSION['image'] = $imglink;
 header('location: profil.php');
 exit;
 

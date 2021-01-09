@@ -4,7 +4,7 @@
 $email = isset($_POST['email'])?htmlspecialchars($_POST['email']):'';
 $password = isset($_POST['password']) ? hash('sha256', $_POST['password']): '';
 
-$q = 'SELECT pseudo FROM user WHERE email = ? AND password = ?';
+$q = 'SELECT pseudo,image FROM user WHERE email = ? AND password = ?';
 $req = $bdd->prepare($q);
 $req->execute([$email, $password]);
 $pseudo = $req->fetch();
@@ -16,7 +16,7 @@ if(empty($pseudo)){
 }else{
 	session_start();
 	$_SESSION['pseudo'] = $pseudo[0];
-
+	$_SESSION['image'] = $pseudo[1];
 	header('location:index.php');
 	exit;
 }
