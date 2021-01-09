@@ -1,5 +1,5 @@
 <?php
-
+  session_start();
 require('includes/config.php');
 
 if(!isset($_POST['pseudo']) || strlen($_POST['pseudo']) < 5 || strlen($_POST['pseudo']) > 35){
