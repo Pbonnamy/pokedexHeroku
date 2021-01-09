@@ -1,0 +1,189 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: Arial;
+}
+
+body{
+  position: relative;
+  padding-bottom: 55px;
+}
+
+.headFoot{
+  background-color: #AAA;
+  padding: 15px 30px 15px 30px;
+}
+.copyrights{
+  text-align: center;
+  color: #FFF;
+}
+
+.logo{
+  height: 40px;
+}
+
+.navbar{
+  float: right;
+}
+
+.navItem{
+  display: inline-block;
+  padding: 0.5em;
+}
+
+.navItem:hover{
+  text-decoration: underline;
+}
+
+a{
+  color: #FFF;
+}
+
+.mainImg{
+  padding-top:50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainTitle{
+  padding: 50px;
+  text-align: center;
+  font-size: 45px;
+  text-transform: uppercase;
+}
+
+.left{
+  vertical-align: middle;
+  display: inline-block;
+  text-align: left;
+}
+.right{
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.card{
+  display: inline-block;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  margin-bottom: 30px;
+}
+
+.pokeh2{
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.imgPoke{
+  width: 150px;
+  height: 150px;
+}
+
+.mainCards{
+  text-align: center;
+}
+.profilPic{
+  width: 120px;
+  height: 120px;
+  vertical-align: top;
+  padding-bottom: 30px;
+}
+
+.profilData{
+  display: inline-block;
+}
+
+main{
+  margin:auto;
+  max-width: 1024px;
+}
+
+.connexion{
+  margin-top: 100px;
+  width: 49%;
+  margin-left: 1%;
+  display: inline-block;
+  float: left;
+
+}
+
+.inscription{
+  margin-top: 100px;
+  width: 49%;
+  margin-right: 1%;
+  display: inline-block;
+}
+
+.inputConnexion{
+  padding: 16px;
+  font-size: 20px;
+  border-radius: 4px;
+  border: 1px solid #AAA;
+  display: block;
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.inputImage{
+  padding: 16px;
+  font-weight: 20px;
+}
+.labelImage{
+  margin-left: 5%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.erreur{
+  padding-top: 40px;
+}
+
+.submit{
+  background-color: #4CAF50;
+  color:#FFF;
+}
+
+.aligntop{
+  vertical-align: top;
+}
+
+.formulaire_ajout{
+  text-align: center;
+}
+.input_add{
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.input_add, .formulaire_ajout_submit{
+  height: 45px;
+  width: 75%;
+  border-radius: 4px;
+  border:1px solid #AAA;
+}
+
+.image_strong{
+  padding-left: 7%;
+  font-size: 20px;
+}
+
+.input_file{
+  height: 45px;
+  width: 75%;
+}
+
+.formulaire_ajout_submit{
+  font-size: 20px;
+  color: white;
+  background-color: #4CAF50;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
