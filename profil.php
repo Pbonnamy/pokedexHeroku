@@ -55,6 +55,7 @@
        ?>
 
      </div>
+     <?php include('includes/chatbox.php'); ?>
     </main>
     <?php include 'includes/footer.php' ?>
   </body>

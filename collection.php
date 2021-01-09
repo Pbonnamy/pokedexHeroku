@@ -45,6 +45,7 @@
        ?>
      </div>
      </div>
+     <?php include('includes/chatbox.php'); ?>
     </main>
 
     <script>
