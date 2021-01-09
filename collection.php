@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Collection</title>
+
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -17,7 +18,12 @@
       ?>
       <div class="mainCards">
         <h1 class="mainTitle">Tous les pokemons</h1>
-
+        <div>
+          <input id="searchField" onkeypress="handle(event)" class="searchfield" type="text" placeholder="...">
+          <br>
+          <button type="button" id="searchButton" name="button" onclick="search()" class="searchbtn">Rechercher</button>
+        </div>
+      <div id="itemlist">
       <?php
       while($infoPoke = $listPokeReq->fetch()){
         echo
@@ -37,10 +43,31 @@
       }
 
        ?>
-
+     </div>
      </div>
     </main>
 
+    <script>
+    function handle(e){
+      if(e.keyCode === 13){
+        e.preventDefault();
+        search();
+      }
+    }
+
+    function search(){
+      const textSearch = document.getElementById('searchField').value;
+      let request = new XMLHttpRequest();
+      request.open('GET', 'itemsearch.php?search='+textSearch);
+      request.onreadystatechange = function() {
+        if(request.readyState == 4) {
+          document.getElementById('itemlist').innerHTML = this.responseText;
+        }
+      }
+      request.send();
+    }
+
+    </script>
     <?php include 'includes/footer.php' ?>
   </body>
 </html>
