@@ -64,6 +64,8 @@ require('includes/config.php');
     'val7' => $idUser
   ]);
 
-  header('location: profil.php');
+  $_SESSION['nompoke']=$nom;
+  $_SESSION['notifbool']="ok";
+  header('location: profil.php?msg=ok');
   exit;
 ?>

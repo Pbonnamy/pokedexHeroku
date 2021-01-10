@@ -57,6 +57,43 @@
      </div>
      <?php include('includes/chatbox.php'); ?>
     </main>
+
+    <script src=https://cdn.pubnub.com/sdk/javascript/pubnub.4.28.2.min.js></script>
+
+    <script>
+    function sendnotif() {
+
+            var pubnub = new PubNub({
+                publishKey: 'pub-c-d69b49c3-ec63-495b-a31d-c06b2c2ba31a',
+                subscribeKey: 'sub-c-66f0521a-52bb-11eb-a73a-1eec528e8f1f'
+            });
+
+                channel = 'pokechat';
+
+                pubnub.publish({
+                  message: '[SYSTEM] : <?php echo $_SESSION['nompoke']; ?> a été ajouté par <?php echo $_SESSION['pseudo']; ?>',
+                  channel: 'pokechat'
+                }, (status, response) => {
+                  console.log(response);
+                });
+
+            pubnub.subscribe({
+                channels: [channel]
+            });
+    };
+
+        <?php
+          if(isset($_SESSION['notifbool'])){
+            if($_SESSION['notifbool']=="ok"){
+              echo 'sendnotif();';
+              $_SESSION['notifbool']="ko";
+            }
+          }
+        ?>
+
+      </script>;
+
     <?php include 'includes/footer.php' ?>
+
   </body>
 </html>

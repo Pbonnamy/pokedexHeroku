@@ -28,10 +28,12 @@
       <strong class="image_strong">Image</strong><br><br>
       <input type="hidden" name="avatar_url" id="avatar_url" class="simple-file-upload">
       <br>
-      <input class="formulaire_ajout_submit" type="submit" name="submit" value="Ajouter">
+      <input class="formulaire_ajout_submit" type="submit" name="submit"  value="Ajouter">
     </form>
     <?php include('includes/chatbox.php'); ?>
   </main>
+
+
     <script src="https://app.simplefileupload.com/buckets/bed9ccaf1cfa347d4933363c22c8a076.js"></script>
     <?php include("includes/footer.php");?>
   </body>
