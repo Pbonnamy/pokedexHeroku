@@ -11,6 +11,7 @@
 } ?>
 
     <script src=https://cdn.pubnub.com/sdk/javascript/pubnub.4.28.2.min.js></script>
+
     <script>
     const name = document.getElementById('divCheckbox').innerHTML;
 

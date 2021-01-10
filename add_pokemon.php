@@ -35,6 +35,7 @@
 
 
     <script src="https://app.simplefileupload.com/buckets/bed9ccaf1cfa347d4933363c22c8a076.js"></script>
+
     <?php include("includes/footer.php");?>
   </body>
 </html>
